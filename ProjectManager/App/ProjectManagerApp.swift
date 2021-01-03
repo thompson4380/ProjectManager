@@ -12,8 +12,9 @@ import Firebase
 struct ProjectManagerApp: App {
     var body: some Scene {
         FirebaseApp.configure()
+        Auth.auth().signInAnonymously()
         return WindowGroup {
-            ContentView()
+            ProjectListView()
         }
     }
 }

@@ -10,6 +10,9 @@ target 'ProjectManager' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
+  #   pod 'FirebaseFirestoreSwift'
+  # https://stackoverflow.com/questions/64670022/firebasefirestoreswift-wont-install-cocoapods/64671117#64671117
 
   post_install do |installer|
       installer.pods_project.targets.each do |target|

@@ -12,7 +12,7 @@
 		F2C3E2AA25A20EF600BE4F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C3E2A925A20EF600BE4F6F /* Assets.xcassets */; };
 		F2C3E2AD25A20EF600BE4F6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C3E2AC25A20EF600BE4F6F /* Preview Assets.xcassets */; };
 		F2C3E2B625A215D300BE4F6F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E2B525A215D300BE4F6F /* Test.swift */; };
-		F2C3E2BC25A21F3300BE4F6F /* Ignore2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E2BB25A21F3300BE4F6F /* Ignore2.swift */; };
+		F2C3E2BF25A2254800BE4F6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C3E2BE25A2254800BE4F6F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		F2C3E2AC25A20EF600BE4F6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2C3E2AE25A20EF600BE4F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2C3E2B525A215D300BE4F6F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		F2C3E2BB25A21F3300BE4F6F /* Ignore2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ignore2.swift; sourceTree = "<group>"; };
+		F2C3E2BE25A2254800BE4F6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +58,11 @@
 			children = (
 				F2C3E2A525A20EF500BE4F6F /* ProjectManagerApp.swift */,
 				F2C3E2A725A20EF500BE4F6F /* ContentView.swift */,
+				F2C3E2BE25A2254800BE4F6F /* GoogleService-Info.plist */,
 				F2C3E2A925A20EF600BE4F6F /* Assets.xcassets */,
 				F2C3E2AE25A20EF600BE4F6F /* Info.plist */,
 				F2C3E2AB25A20EF600BE4F6F /* Preview Content */,
 				F2C3E2B525A215D300BE4F6F /* Test.swift */,
-				F2C3E2BB25A21F3300BE4F6F /* Ignore2.swift */,
 			);
 			path = ProjectManager;
 			sourceTree = "<group>";
@@ -134,6 +134,7 @@
 			files = (
 				F2C3E2AD25A20EF600BE4F6F /* Preview Assets.xcassets in Resources */,
 				F2C3E2AA25A20EF600BE4F6F /* Assets.xcassets in Resources */,
+				F2C3E2BF25A2254800BE4F6F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +147,6 @@
 			files = (
 				F2C3E2A825A20EF500BE4F6F /* ContentView.swift in Sources */,
 				F2C3E2A625A20EF500BE4F6F /* ProjectManagerApp.swift in Sources */,
-				F2C3E2BC25A21F3300BE4F6F /* Ignore2.swift in Sources */,
 				F2C3E2B625A215D300BE4F6F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

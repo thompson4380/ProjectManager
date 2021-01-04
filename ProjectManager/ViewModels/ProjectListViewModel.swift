@@ -11,7 +11,7 @@ import Combine
 class ProjectListViewModel: ObservableObject {
     
     @Published var projectRepository = ProjectRepository()
-    @Published var projectCellViewModels = [ProjectCellViewModel]()
+    @Published var projectCellViewModels = [ProjectDetailViewModel]()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -19,7 +19,7 @@ class ProjectListViewModel: ObservableObject {
         projectRepository.$projects
             .map { projects in
                 projects.map { project in
-                    ProjectCellViewModel(project: project)
+                    ProjectDetailViewModel(project: project)
                 }
             }
             .assign(to: \.projectCellViewModels, on: self)
@@ -27,8 +27,12 @@ class ProjectListViewModel: ObservableObject {
     }
     
     func addProject(project: Project) {
-       // projectRepository.addProject(project)
+        projectRepository.addProject(project)
     }
     
+  
+    func deleteProject(at index: Int) {
+        projectRepository.deleteProject(at: index)
+    }
     
 }

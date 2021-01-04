@@ -16,7 +16,14 @@
 		F2C3E31325A24A9D00BE4F6F /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E31225A24A9D00BE4F6F /* ProjectRepository.swift */; };
 		F2C3E31625A24CC400BE4F6F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E31525A24CC400BE4F6F /* Project.swift */; };
 		F2C3E34525A2524B00BE4F6F /* ProjectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E34425A2524B00BE4F6F /* ProjectListViewModel.swift */; };
-		F2C3E34825A252EE00BE4F6F /* ProjectCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E34725A252EE00BE4F6F /* ProjectCellViewModel.swift */; };
+		F2C3E34825A252EE00BE4F6F /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E34725A252EE00BE4F6F /* ProjectDetailViewModel.swift */; };
+		F2C3E34C25A331F500BE4F6F /* ProjectCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E34B25A331F500BE4F6F /* ProjectCellView.swift */; };
+		F2C3E34F25A3366800BE4F6F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E34E25A3366800BE4F6F /* ProjectDetailView.swift */; };
+		F2C3E35325A3679D00BE4F6F /* ProjectAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35225A3679D00BE4F6F /* ProjectAddView.swift */; };
+		F2C3E35625A3747100BE4F6F /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35525A3747100BE4F6F /* TaskRepository.swift */; };
+		F2C3E35925A3750500BE4F6F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35825A3750500BE4F6F /* Task.swift */; };
+		F2C3E35C25A3784600BE4F6F /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35B25A3784600BE4F6F /* TaskListViewModel.swift */; };
+		F2C3E35F25A378EF00BE4F6F /* TaskDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35E25A378EF00BE4F6F /* TaskDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +39,14 @@
 		F2C3E31225A24A9D00BE4F6F /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
 		F2C3E31525A24CC400BE4F6F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		F2C3E34425A2524B00BE4F6F /* ProjectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewModel.swift; sourceTree = "<group>"; };
-		F2C3E34725A252EE00BE4F6F /* ProjectCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellViewModel.swift; sourceTree = "<group>"; };
+		F2C3E34725A252EE00BE4F6F /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
+		F2C3E34B25A331F500BE4F6F /* ProjectCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCellView.swift; sourceTree = "<group>"; };
+		F2C3E34E25A3366800BE4F6F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		F2C3E35225A3679D00BE4F6F /* ProjectAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAddView.swift; sourceTree = "<group>"; };
+		F2C3E35525A3747100BE4F6F /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		F2C3E35825A3750500BE4F6F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F2C3E35B25A3784600BE4F6F /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		F2C3E35E25A378EF00BE4F6F /* TaskDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewModel.swift; sourceTree = "<group>"; };
 		F332D197B9D1825D850D5966 /* Pods_ProjectManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				F2C3E2C125A2260500BE4F6F /* ProjectListView.swift */,
+				F2C3E34B25A331F500BE4F6F /* ProjectCellView.swift */,
+				F2C3E34E25A3366800BE4F6F /* ProjectDetailView.swift */,
+				F2C3E35225A3679D00BE4F6F /* ProjectAddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,7 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				F2C3E34425A2524B00BE4F6F /* ProjectListViewModel.swift */,
-				F2C3E34725A252EE00BE4F6F /* ProjectCellViewModel.swift */,
+				F2C3E34725A252EE00BE4F6F /* ProjectDetailViewModel.swift */,
+				F2C3E35B25A3784600BE4F6F /* TaskListViewModel.swift */,
+				F2C3E35E25A378EF00BE4F6F /* TaskDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -136,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C3E31525A24CC400BE4F6F /* Project.swift */,
+				F2C3E35825A3750500BE4F6F /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C3E31225A24A9D00BE4F6F /* ProjectRepository.swift */,
+				F2C3E35525A3747100BE4F6F /* TaskRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -262,12 +283,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2C3E34825A252EE00BE4F6F /* ProjectCellViewModel.swift in Sources */,
+				F2C3E35325A3679D00BE4F6F /* ProjectAddView.swift in Sources */,
+				F2C3E34825A252EE00BE4F6F /* ProjectDetailViewModel.swift in Sources */,
 				F2C3E31325A24A9D00BE4F6F /* ProjectRepository.swift in Sources */,
 				F2C3E2A625A20EF500BE4F6F /* ProjectManagerApp.swift in Sources */,
+				F2C3E35925A3750500BE4F6F /* Task.swift in Sources */,
+				F2C3E35F25A378EF00BE4F6F /* TaskDetailViewModel.swift in Sources */,
+				F2C3E35C25A3784600BE4F6F /* TaskListViewModel.swift in Sources */,
+				F2C3E35625A3747100BE4F6F /* TaskRepository.swift in Sources */,
 				F2C3E31625A24CC400BE4F6F /* Project.swift in Sources */,
 				F2C3E34525A2524B00BE4F6F /* ProjectListViewModel.swift in Sources */,
 				F2C3E2C225A2260500BE4F6F /* ProjectListView.swift in Sources */,
+				F2C3E34C25A331F500BE4F6F /* ProjectCellView.swift in Sources */,
+				F2C3E34F25A3366800BE4F6F /* ProjectDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

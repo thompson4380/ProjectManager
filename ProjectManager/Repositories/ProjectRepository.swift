@@ -27,9 +27,9 @@ class ProjectRepository: ObservableObject {
                 if let querrySnapshot = querrySnapshot {
                     self.projects = querrySnapshot.documents.compactMap{ document in
                         do {
-                            let x = try document.data(as: Project.self)
+                            return try document.data(as: Project.self)
                             
-                            return x
+                            
                         } catch {
                             print(error.localizedDescription)
                         }
@@ -37,6 +37,38 @@ class ProjectRepository: ObservableObject {
                     }
                 }
             }
+    }
+    
+    func addProject(_ project: Project) {
+        do {
+            let _ = try db.collection("projects").addDocument(from: project)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func updateProject(_ project: Project) {
+        if let projectId = project.id {
+            do {
+                try db.collection("projects").document(projectId).setData(from: project)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func deleteProject(at index: Int) {
+        deleteProject(projects[index])
+    }
+    
+    func deleteProject(_ project: Project) {
+        if let projectId = project.id {
+            db.collection("projects").document(projectId).delete { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
 }

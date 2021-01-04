@@ -11,7 +11,16 @@ struct ProjectDetailView: View {
     
     @ObservedObject var projectDetailViewModel: ProjectDetailViewModel
     
+    @ObservedObject var taskListViewModel: TaskListViewModel
+        
     
+    @State private var showTaskAddView = false
+    
+    init(projectDetailViewModel: ProjectDetailViewModel) {
+        self.projectDetailViewModel = projectDetailViewModel
+        
+        taskListViewModel = TaskListViewModel(projectId: projectDetailViewModel.project.id ?? "")
+    }
     
     
     
@@ -32,16 +41,19 @@ struct ProjectDetailView: View {
                 
                 Section(header: Text("Tasks")) {
                     Button("Add new task") {
-                        
+                        self.showTaskAddView.toggle()
                     }
                     List {
-                        Text("Task 01")
-                        Text("Task 02")
+                        ForEach(taskListViewModel.taskDetailViewModels) { taskDetailViewModel in
+                            Text(taskDetailViewModel.task.taskName)
+                        }
                     }
                 }
-                
-
             }
+            
+        }
+        .sheet(isPresented: $showTaskAddView) {
+            TaskAddView(projectId: projectDetailViewModel.project.id ?? "")
         }
         
     }

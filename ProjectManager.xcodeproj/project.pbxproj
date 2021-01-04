@@ -24,6 +24,7 @@
 		F2C3E35925A3750500BE4F6F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35825A3750500BE4F6F /* Task.swift */; };
 		F2C3E35C25A3784600BE4F6F /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35B25A3784600BE4F6F /* TaskListViewModel.swift */; };
 		F2C3E35F25A378EF00BE4F6F /* TaskDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E35E25A378EF00BE4F6F /* TaskDetailViewModel.swift */; };
+		F2C3E36225A3A34E00BE4F6F /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3E36125A3A34E00BE4F6F /* TaskAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		F2C3E35825A3750500BE4F6F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F2C3E35B25A3784600BE4F6F /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		F2C3E35E25A378EF00BE4F6F /* TaskDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewModel.swift; sourceTree = "<group>"; };
+		F2C3E36125A3A34E00BE4F6F /* TaskAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
 		F332D197B9D1825D850D5966 /* Pods_ProjectManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				F2C3E34B25A331F500BE4F6F /* ProjectCellView.swift */,
 				F2C3E34E25A3366800BE4F6F /* ProjectDetailView.swift */,
 				F2C3E35225A3679D00BE4F6F /* ProjectAddView.swift */,
+				F2C3E36125A3A34E00BE4F6F /* TaskAddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C3E35325A3679D00BE4F6F /* ProjectAddView.swift in Sources */,
+				F2C3E36225A3A34E00BE4F6F /* TaskAddView.swift in Sources */,
 				F2C3E34825A252EE00BE4F6F /* ProjectDetailViewModel.swift in Sources */,
 				F2C3E31325A24A9D00BE4F6F /* ProjectRepository.swift in Sources */,
 				F2C3E2A625A20EF500BE4F6F /* ProjectManagerApp.swift in Sources */,

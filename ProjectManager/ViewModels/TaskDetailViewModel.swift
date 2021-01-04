@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class TaskDetailViewModel: ObservableObject {
+class TaskDetailViewModel: ObservableObject, Identifiable {
     
     @Published var taskRepository = TaskRepository(projectId: "YFQ2tDCHIRxwoa30f6oK")
     @Published var task: Task
@@ -32,7 +32,10 @@ class TaskDetailViewModel: ObservableObject {
         
     }
     
-    
+    func addTaskToDatabase() {
+        taskRepository.addTask(self.task)
+        
+    }
     
     
 }

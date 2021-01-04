@@ -10,23 +10,34 @@ import Combine
 
 class TaskListViewModel: ObservableObject {
     
-    @Published var taskRespository = TaskRepository(projectId: "YFQ2tDCHIRxwoa30f6oK")
+    @Published var taskRepository: TaskRepository
+//    @Published var taskRespository = TaskRepository(projectId: "YFQ2tDCHIRxwoa30f6oK")
     
-    @Published var taskCellViewModels = [TaskDetailViewModel]()
+    @Published var taskDetailViewModels = [TaskDetailViewModel]()
     
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
-        taskRespository.$tasks
+    init(projectId: String) {
+        
+        self.taskRepository = TaskRepository(projectId: projectId)
+        
+        taskRepository.$tasks
             .map { tasks in
                 tasks.map { task in
                     TaskDetailViewModel(task: task)
                 }
             }
-            .assign(to: \.taskCellViewModels, on: self)
+            .assign(to: \.taskDetailViewModels, on: self)
             .store(in: &cancellables)
     }
     
+    func addTask(task: Task) {
+        taskRepository.addTask(task)
+    }
     
+    func deleteTask(at index: Int) {
+        taskRepository.deleteTask(at: index)
+    }
     
+  
 }

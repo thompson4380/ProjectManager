@@ -30,10 +30,6 @@ class ProjectDetailViewModel: ObservableObject, Identifiable {
         
     }
     
-    func addProject(_ project: Project) {
-        projectRepository.addProject(project)
-    }
-    
     func addProjectToDatabase() {
         projectRepository.addProject(self.project)
     }

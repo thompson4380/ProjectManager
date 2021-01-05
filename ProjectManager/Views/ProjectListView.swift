@@ -19,7 +19,7 @@ struct ProjectListView: View {
                 List {
                     ForEach(projectListViewModel.projectCellViewModels) { projectDetailViewModel in
                         NavigationLink(destination: ProjectDetailView(projectDetailViewModel: projectDetailViewModel)) {
-                            ProjectCellView(projectCellViewModel: projectDetailViewModel)
+                            ProjectCellView(projectDetailViewModel: projectDetailViewModel)
                         }
                         // TODO: onDelete seems to work just one time
                     }.onDelete(perform: deleteProject(at:))

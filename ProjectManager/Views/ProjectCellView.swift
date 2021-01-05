@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ProjectCellView: View {
     
-    @ObservedObject var projectCellViewModel: ProjectDetailViewModel
+    @ObservedObject var projectDetailViewModel: ProjectDetailViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(projectCellViewModel.project.projectName)
+            Text(projectDetailViewModel.project.projectName)
                 .bold()
-            Text("PM: \(projectCellViewModel.project.projectManager)")
+            Text("PM: \(projectDetailViewModel.project.projectManager)")
             Text("Finished: 2/4")
             Text("Due: 23.01.2021")
             

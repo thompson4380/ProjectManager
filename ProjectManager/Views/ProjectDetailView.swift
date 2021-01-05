@@ -45,7 +45,9 @@ struct ProjectDetailView: View {
                     }
                     List {
                         ForEach(taskListViewModel.taskDetailViewModels) { taskDetailViewModel in
-                            Text(taskDetailViewModel.task.taskName)
+                            NavigationLink(destination: TaskEditView(taskDetailViewModel: taskDetailViewModel)) {
+                                TaskCellView(taskDetailViewModel: taskDetailViewModel)
+                            }
                         }
                     }
                 }

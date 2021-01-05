@@ -1,0 +1,5 @@
+
+
+It is just possible to swipe once a project to delete it
+
+TaskCellView with check option

@@ -20,53 +20,5 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "43097351-2E39-444B-AC11-90F4A38B627C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ProjectManager/Views/ProjectAddView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "43097351-2E39-444B-AC11-90F4A38B627C - 474fe6954bd24fc9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ProjectManager.ProjectAddView.body.getter : some"
-                  moduleName = "ProjectManager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thompson/Documents/Development/Swift%20Projects/ProjectManager/ProjectManager/Views/ProjectAddView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "178">
-               </Location>
-               <Location
-                  uuid = "43097351-2E39-444B-AC11-90F4A38B627C - f751bf93ffbc0bc6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarItems&lt;A, B where A1: SwiftUI.View, B1: SwiftUI.View&gt;(leading: A1, trailing: B1) -&gt; some&gt;&gt;.0 in ProjectManager.ProjectAddView.body.getter : some"
-                  moduleName = "ProjectManager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/thompson/Documents/Development/Swift%20Projects/ProjectManager/ProjectManager/Views/ProjectAddView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "478">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -1,5 +1,19 @@
 
+Questions and open points
 
-It is just possible to swipe once a project to delete it
 
-TaskCellView with check option
+Right now, it is just possible to swipe once a project to delete it
+
+Datepicker format date (European Standard)
+
+How to present project statistics in the project overview
+(e.g. 2/4 Done, last due date of all open tasks of one project)
+
+.onDelete Task List does not work
+
+Delete all tasks in a project
+
+
+
+Delete a project with all asigned tasks
+PopUp to confirm 

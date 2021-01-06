@@ -16,13 +16,18 @@ class TaskRepository: ObservableObject {
     
     @Published var tasks = [Task]()
     
+    var projectId = ""
+    
     init(projectId: String) {
-        loadData(projectId: projectId)
+        self .projectId = projectId
+        loadData()
     }
     
+    init() {
+        loadData()
+    }
     
-    
-    func loadData(projectId: String) {
+    func loadData() {
         print("Loading Tasks for Project: \(projectId)")
         db.collection("tasks")
             .whereField("projectId", isEqualTo: projectId)
@@ -65,11 +70,22 @@ class TaskRepository: ObservableObject {
     }
     
     func deleteTask(_ task: Task) {
+        
         if let taskId = task.id {
             db.collection("tasks").document(taskId).delete { (error) in
                 if let error = error {
                     print(error.localizedDescription)
                 }
+            }
+        }
+    }
+    
+    func deleteTasks(by projectId: String) {
+        print("Delete tasks with projectId: \(projectId)")
+        for task in tasks {
+            print("task.projectId: \(task.projectId)  projectId: \(projectId)")
+            if task.projectId == projectId {
+                deleteTask(task)
             }
         }
     }

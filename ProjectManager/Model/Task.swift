@@ -17,5 +17,16 @@ struct Task: Codable, Identifiable {
     var taskComment: String
     var taskResponsible: String
     var isDone: Bool
+    var dueDate: Date
+    
+}
+
+extension Task {
+    
+    var dueDateAsString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d.MM.y"
+        return formatter.string(from: dueDate)
+    }
     
 }

@@ -10,7 +10,7 @@ import Combine
 
 class TaskDetailViewModel: ObservableObject, Identifiable {
     
-    @Published var taskRepository = TaskRepository(projectId: "YFQ2tDCHIRxwoa30f6oK")
+    @Published var taskRepository = TaskRepository()
     @Published var task: Task
     @Published var completionStateIconName = ""
     
@@ -44,6 +44,11 @@ class TaskDetailViewModel: ObservableObject, Identifiable {
         taskRepository.addTask(self.task)
         
     }
+    
+    func deleteTaskFromDatabase() {
+        taskRepository.deleteTask(self.task)
+    }
+    
     
     
 }

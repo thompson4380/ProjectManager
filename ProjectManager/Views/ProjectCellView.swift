@@ -18,6 +18,8 @@ struct ProjectCellView: View {
             Text("PM: \(projectDetailViewModel.project.projectManager)")
             Text("Finished: 2/4")
             Text("Due: 23.01.2021")
+            // Only for debugging
+            Text("ProjectId: \(projectDetailViewModel.project.id ?? "")")
             
         }
         

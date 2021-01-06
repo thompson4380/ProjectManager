@@ -11,16 +11,15 @@ import Combine
 class TaskListViewModel: ObservableObject {
     
     @Published var taskRepository: TaskRepository
-//    @Published var taskRespository = TaskRepository(projectId: "YFQ2tDCHIRxwoa30f6oK")
-    
     @Published var taskDetailViewModels = [TaskDetailViewModel]()
     
     private var cancellables = Set<AnyCancellable>()
     
+
     init(projectId: String) {
-        
+
         self.taskRepository = TaskRepository(projectId: projectId)
-        
+    
         taskRepository.$tasks
             .map { tasks in
                 tasks.map { task in

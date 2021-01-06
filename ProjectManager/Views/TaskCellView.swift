@@ -24,6 +24,8 @@ struct TaskCellView: View {
             VStack(alignment: .leading) {
                 Text(taskDetailViewModel.task.taskName)
                 Text(taskDetailViewModel.task.taskResponsible)
+                Text(taskDetailViewModel.task.dueDateAsString)
+                
                 
             }
         }

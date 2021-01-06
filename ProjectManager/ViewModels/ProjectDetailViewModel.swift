@@ -34,4 +34,7 @@ class ProjectDetailViewModel: ObservableObject, Identifiable {
         projectRepository.addProject(self.project)
     }
     
+    func deleteProjectFromDatabase() {
+        projectRepository.deleteProject(self.project)
+    }
 }

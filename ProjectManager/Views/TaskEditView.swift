@@ -11,6 +11,7 @@ struct TaskEditView: View {
     
     @ObservedObject var taskDetailViewModel: TaskDetailViewModel
     @Environment(\.presentationMode) var presentationMode
+    @State private var showConfirmDeleteDialog = false
     
     var body: some View {
         Form {
@@ -18,7 +19,6 @@ struct TaskEditView: View {
             TextField("Task Responsible", text: $taskDetailViewModel.task.taskResponsible)
             Toggle("Done", isOn: $taskDetailViewModel.task.isDone)
             DatePicker("Due date:", selection: $taskDetailViewModel.task.dueDate, displayedComponents: .date)
-            
         }
         .navigationBarTitle(taskDetailViewModel.task.taskName, displayMode: .inline)
         .navigationBarItems(trailing: deleteButton)
@@ -26,11 +26,24 @@ struct TaskEditView: View {
     
     
     var deleteButton: some View {
-        Button("Delete") {
-            // TODO: Include a PopUp to confirm
-            taskDetailViewModel.deleteTaskFromDatabase()
-            presentationMode.wrappedValue.dismiss()
+        Button(action: {
+            self.showConfirmDeleteDialog.toggle()
+        }) {
+            Image(systemName: "trash")
         }
+        .alert(isPresented: $showConfirmDeleteDialog) {
+            Alert(
+                title: Text("Delete task"),
+                message: Text("Task will be deleted"),
+                primaryButton: .cancel(Text("Cancel")),
+                secondaryButton: .destructive(Text("Delete"), action: self.deleteTask)
+            )
+        }
+    }
+    
+    func deleteTask() {
+        taskDetailViewModel.deleteTaskFromDatabase()
+        presentationMode.wrappedValue.dismiss()
     }
 }
 

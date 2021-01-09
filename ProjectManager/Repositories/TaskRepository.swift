@@ -41,11 +41,25 @@ class TaskRepository: ObservableObject {
                             print(error.localizedDescription)
                         }
                         return nil
-                        
                     }
                 }
             }
     }
+    
+    func deleteAllTasks() {
+        db.collection("tasks")
+            .whereField("projectId", isEqualTo: projectId)
+            .getDocuments { (querrySnapshot, error) in
+                if let error = error {
+                    print("Error while deleting documents \(error.localizedDescription)")
+                } else {
+                    for document in querrySnapshot!.documents {
+                        document.reference.delete()
+                    }
+                }
+            }
+    }
+    
     
     func addTask(_ task: Task) {
         do {
@@ -80,15 +94,20 @@ class TaskRepository: ObservableObject {
         }
     }
     
-    func deleteTasks(by projectId: String) {
-        print("Delete tasks with projectId: \(projectId)")
-        for task in tasks {
-            print("task.projectId: \(task.projectId)  projectId: \(projectId)")
-            if task.projectId == projectId {
-                deleteTask(task)
-            }
-        }
-    }
+//    func deleteTasks(by projectId: String) {
+//        
+//        print("Delete tasks with projectId: \(projectId)")
+//        self.projectId = projectId
+//        loadData()
+//        
+//        print("#tasks: \(tasks.count)")
+//        for task in tasks {
+//            print("task.projectId: \(task.projectId)  projectId: \(projectId)")
+//            if task.projectId == projectId {
+//                deleteTask(task)
+//            }
+//        }
+//    }
     
     
 }

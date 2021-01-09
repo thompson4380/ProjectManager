@@ -11,7 +11,6 @@ struct ProjectListView: View {
     
     @ObservedObject var projectListViewModel = ProjectListViewModel()
     @State private var showAddProjectView = false
-    @Environment(\.editMode) var editMode
     
     var body: some View {
         NavigationView {
@@ -21,28 +20,21 @@ struct ProjectListView: View {
                         NavigationLink(destination: ProjectDetailView(projectDetailViewModel: projectDetailViewModel)) {
                             ProjectCellView(projectDetailViewModel: projectDetailViewModel)
                         }
-                        // TODO: onDelete seems to work just one time
-                    }.onDelete(perform: deleteProject(at:))
+                    }
                 }
             }
             .navigationBarTitle("Project Manager", displayMode: .inline)
-            .navigationBarItems(leading: EditButton(), trailing: addButton)
+            .navigationBarItems(trailing: addButton)
             .sheet(isPresented: $showAddProjectView) {
                 ProjectAddView()
             }
         }
     }
     
-    func deleteProject(at indexSet: IndexSet) {
-        for index in indexSet {
-            projectListViewModel.deleteProject(at: index)
-        }
-    }
-    
     var addButton: some View {
         Button("Add") {
             self.showAddProjectView.toggle()
-        }.disabled(editMode?.wrappedValue.isEditing ?? false)
+        }
     }
     
 }

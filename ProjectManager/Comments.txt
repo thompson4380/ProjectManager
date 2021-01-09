@@ -2,18 +2,12 @@
 Questions and open points
 
 
-Right now, it is just possible to swipe once a project to delete it
+How to configure the DatePicker in the TaskEditView to a European Standard
+- dd.mm.yyyy
+- First day of week = Monday
 
-Datepicker format date (European Standard)
 
-How to present project statistics in the project overview
+How to get data to present project statistics in the project overview
 (e.g. 2/4 Done, last due date of all open tasks of one project)
-
-.onDelete Task List does not work
-
-Delete all tasks in a project
-
-
-
-Delete a project with all asigned tasks
-PopUp to confirm 
+Create a again a taskRepository Instance and select the data from there?
+Better Singleton??

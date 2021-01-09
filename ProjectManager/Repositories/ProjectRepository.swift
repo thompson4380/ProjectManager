@@ -63,14 +63,12 @@ class ProjectRepository: ObservableObject {
     
     func deleteProject(_ project: Project) {
         
-        
-        
         if let projectId = project.id {
             
             // delete all tasks of the project
             let taskRepository = TaskRepository(projectId: projectId)
-            
-            taskRepository.deleteTasks(by: projectId)
+            taskRepository.deleteAllTasks()
+           // taskRepository.deleteTasks(by: projectId)
             
             // delete the project
             db.collection("projects").document(projectId).delete { (error) in

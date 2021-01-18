@@ -13,12 +13,16 @@ class ProjectListViewModel: ObservableObject {
     @Published var projectRepository = ProjectRepository()
     @Published var projectCellViewModels = [ProjectDetailViewModel]()
     
+    
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
+        
         projectRepository.$projects
             .map { projects in
                 projects.map { project in
+                    
                     ProjectDetailViewModel(project: project)
                 }
             }

@@ -28,8 +28,6 @@ class ProjectRepository: ObservableObject {
                     self.projects = querrySnapshot.documents.compactMap{ document in
                         do {
                             return try document.data(as: Project.self)
-                            
-                            
                         } catch {
                             print(error.localizedDescription)
                         }

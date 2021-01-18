@@ -61,6 +61,15 @@ class TaskRepository: ObservableObject {
     }
     
     
+    
+    var count: Int {
+        tasks.count
+    }
+    
+    var doneCount: Int {
+        tasks.map { $0.isDone }.count
+    }
+    
     func addTask(_ task: Task) {
         do {
             let _ = try db.collection("tasks").addDocument(from: task)
@@ -94,20 +103,6 @@ class TaskRepository: ObservableObject {
         }
     }
     
-//    func deleteTasks(by projectId: String) {
-//        
-//        print("Delete tasks with projectId: \(projectId)")
-//        self.projectId = projectId
-//        loadData()
-//        
-//        print("#tasks: \(tasks.count)")
-//        for task in tasks {
-//            print("task.projectId: \(task.projectId)  projectId: \(projectId)")
-//            if task.projectId == projectId {
-//                deleteTask(task)
-//            }
-//        }
-//    }
     
     
 }

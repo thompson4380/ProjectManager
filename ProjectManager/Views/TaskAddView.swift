@@ -11,6 +11,9 @@ struct TaskAddView: View {
     
     // TODO: Cant we initialize the Task within the init()??
     @State private var task = Task(id: nil, projectId: "", taskName: "", taskComment: "", taskResponsible: "", isDone: false, dueDate: Date())
+    
+
+    
     @Environment(\.presentationMode) var presentationMode
     
     var projectId: String
@@ -18,7 +21,6 @@ struct TaskAddView: View {
     init(projectId: String) {
         self.projectId = projectId
     }
-    
     
     var body: some View {
         NavigationView {
@@ -28,9 +30,9 @@ struct TaskAddView: View {
             }
             .navigationBarTitle("Add new Task", displayMode: .inline)
                 .navigationBarItems(leading: cancelButton, trailing: saveButton)
-        }.onAppear() {
+        }/*.onAppear() {
             self.task.projectId = self.projectId
-        }
+        }*/
     }
     
     var cancelButton: some View {
@@ -42,6 +44,7 @@ struct TaskAddView: View {
     var saveButton: some View {
         // TODO: Only permit saving when all fields are valid
         Button("Save") {
+            task.projectId = self.projectId
             let taskDetailViewModel = TaskDetailViewModel(task: task)
             print(task.taskName)
             print(task.projectId)
